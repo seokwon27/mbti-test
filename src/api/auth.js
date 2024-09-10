@@ -16,7 +16,7 @@ export const login = async (userData) => {
     id: userData.id,
     password: userData.password,
   });
-  console.log(response);
+  // console.log(response);
 
   return response.data;
 };
@@ -35,6 +35,6 @@ export const updateProfile = async (userData) => {
       Authorization: `Bearer ${userData.accessToken}`,
     },
   });
-  console.log(response);
+  // console.log(response);
   return response.data;
 };
