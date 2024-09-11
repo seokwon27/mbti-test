@@ -20,7 +20,7 @@ const mbtiDescriptions = {
 };
 
 const TestResultItem = ({ result, user, onUpdate, onDelete }) => {
-  console.log(result);
+  // console.log(result);
 
   const isOwner = result.userID === user.userId;
   const formattedDate = new Date(result.date).toLocaleString();
