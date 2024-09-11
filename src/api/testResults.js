@@ -1,9 +1,10 @@
 import axios from "axios";
 
-const API_URL = "https://aback-quiver-tray.glitch.me";
+const API_URL = "https://aback-quiver-tray.glitch.me/testResults ";
 
 export const getTestResults = async () => {
   const response = await axios.get(API_URL);
+  // console.log(response);
   return response.data;
 };
 

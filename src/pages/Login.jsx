@@ -11,7 +11,7 @@ const Login = ({ setUser }) => {
       setUser(userData);
       navigate("/");
       alert(`${userData.nickname}님 안녕하세요`);
-      console.log("userData : ", userData);
+      // console.log("userData : ", userData);
     } catch (error) {
       alert("로그인 실패");
       console.error("login error : ", error);
