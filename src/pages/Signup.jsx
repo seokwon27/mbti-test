@@ -16,8 +16,8 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex flex-col bg-white">
-      회원가입
+    <div className="flex flex-col bg-white p-3 rounded-lg shadow-md">
+      <h3 className="text-xl font-semibold">회원가입</h3>
       <AuthForm mode={"signup"} onSubmit={handleSignup} />
       <span className="text-sm">
         계정이 이미 있으신가요?

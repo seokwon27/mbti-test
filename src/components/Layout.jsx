@@ -15,7 +15,7 @@ const Layout = ({ children, user, setUser }) => {
   return (
     <div>
       <header>
-        <nav className="h-12 flex flex-row justify-between px-20 text-center items-center text-red-400 font-semibold shadow-md mb-8">
+        <nav className="h-12 flex flex-row justify-between px-10 text-center items-center text-red-400 font-semibold shadow-md  mb-8">
           <Link to="/">홈</Link>
           <div className="space-x-4">
             {user ? (

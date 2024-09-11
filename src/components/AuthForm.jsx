@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const AuthForm = ({ mode, onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -27,7 +27,10 @@ const AuthForm = ({ mode, onSubmit }) => {
         });
   };
   return (
-    <form className=" flex flex-col m-9 bg-slate-100 gap-3 p-5" onSubmit={handleSubmit}>
+    <form
+      className=" flex flex-col m-5 bg-slate-200 gap-3 p-5 shadow-md rounded-md"
+      onSubmit={handleSubmit}
+    >
       <input
         type="text"
         name="id"
@@ -35,6 +38,7 @@ const AuthForm = ({ mode, onSubmit }) => {
         value={formData.id}
         onChange={handleChange}
         required
+        className="rounded-md"
       />
       <input
         type="password"
@@ -43,6 +47,7 @@ const AuthForm = ({ mode, onSubmit }) => {
         value={formData.password}
         onChange={handleChange}
         required
+        className="rounded-md"
       />
       {mode === "signup" && (
         <input
@@ -54,7 +59,9 @@ const AuthForm = ({ mode, onSubmit }) => {
           required
         />
       )}
-      <button type="submit">{mode === "login" ? "로그인" : "회원가입"}</button>
+      <button className="bg-blue-500 text-white rounded-md" type="submit">
+        {mode === "login" ? "로그인" : "회원가입"}
+      </button>
     </form>
   );
 };

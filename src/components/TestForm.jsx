@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { questions } from "../data/questions";
 
 const TestForm = ({ onSubmit }) => {
@@ -16,7 +16,10 @@ const TestForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-4 bg-gray-100 rounded shadow-md mb-5">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-4 p-4 bg-slate-200 rounded shadow-md mb-5 rounded-md mt-3"
+    >
       {questions.map((q, index) => {
         return (
           <div key={q.id} className="w-full shadow-md bg-white border rounded-lg p-3">
@@ -30,6 +33,7 @@ const TestForm = ({ onSubmit }) => {
                   checked={answers[index] === option}
                   onChange={() => handleChange(index, option)}
                   className="mr-2"
+                  required
                 />
                 {option}
               </label>
