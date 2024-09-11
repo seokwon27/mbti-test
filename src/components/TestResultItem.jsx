@@ -1,4 +1,3 @@
-import React from "react";
 import { deleteTestResult, updateTestResultVisibility } from "../api/testResults";
 
 const mbtiDescriptions = {
@@ -21,6 +20,8 @@ const mbtiDescriptions = {
 };
 
 const TestResultItem = ({ result, user, onUpdate, onDelete }) => {
+  console.log(result);
+
   const isOwner = result.userID === user.userId;
   const formattedDate = new Date(result.date).toLocaleString();
   const description = mbtiDescriptions[result.result] || "mbti 유형을 찾을 수 없습니다.";
